@@ -1,3 +1,4 @@
+<view>aaaaaaaaaaaaaaaaaaaaaaaaaa</view>
 <!--首页轮播图-->
 <swiper autoplay interval="5000" circular indicator-dots indicator-color="#fff" indicator-active-color="#2E8B57">
   <swiper-item wx:for="{{swiperSrc}}" wx:key="*this" >
