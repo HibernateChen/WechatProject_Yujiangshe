@@ -1,0 +1,13 @@
+<view class="aboutus_page">
+    <image mode="widthFix" src="https://pic.downk.cc/item/5eda0c4ac2a9a83be533f3ea.jpg" />
+    <view class="slogan">
+        <text>以匠人之心，\n\n做质感语言教育。</text>
+    </view>
+    <!-- 站位行 -->
+    <view style="height:30rpx"></view>
+    <view class="brand_story">
+        <text decode="{{true}}">
+            语匠社是一群创意无限，对语言学习充满奇思妙想的年轻人成立的工作室。在这个把教育商业化，流水线化，只为了速成“人才”的时代，我们执着于手工制造的温度，秉承着踏实的匠人情怀。
+        </text>
+    </view>
+</view>

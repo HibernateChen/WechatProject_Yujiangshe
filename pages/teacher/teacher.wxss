@@ -1,0 +1,40 @@
+.teacher_group {
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10rpx;
+}
+.teacher_group .teacher {
+  background-color: white;
+  width: 47%;
+  margin: 10rpx;
+  border-radius: 10rpx;
+  height: 450rpx;
+}
+.teacher_group .teacher .teacher_image {
+  display: flex;
+  justify-content: center;
+  margin-top: 30rpx;
+}
+.teacher_group .teacher .teacher_image image {
+  border-radius: 50%;
+  width: 30%;
+}
+.teacher_group .teacher .teacher_name {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.teacher_group .teacher .detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60rpx;
+  margin-top: 205rpx;
+  background-color: var(--themeColor);
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  color: white;
+}

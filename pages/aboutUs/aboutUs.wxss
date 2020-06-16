@@ -1,0 +1,22 @@
+.aboutus_page {
+  background-color: white;
+  margin: 15rpx;
+  border-radius: 15rpx;
+}
+.aboutus_page image {
+  width: 100%;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+}
+.aboutus_page .slogan {
+  padding-top: 15rpx;
+  margin: 15rpx;
+}
+.aboutus_page .slogan text {
+  font-size: medium;
+  font-weight: bold;
+}
+.aboutus_page .brand_story {
+  margin: 15rpx;
+  line-height: 55rpx;
+}

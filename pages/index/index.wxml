@@ -1,0 +1,106 @@
+<!--首页轮播图-->
+<swiper autoplay interval="5000" circular indicator-dots indicator-color="#fff" indicator-active-color="#2E8B57">
+  <swiper-item wx:for="{{swiperSrc}}" wx:key="*this" >
+    <image mode="widthFix" src="{{item.src}}" />
+  </swiper-item>
+</swiper>
+
+<!--首页导航-->
+<view class="index_cate">
+  <navigator url="/pages/aboutUs/aboutUs">
+    <image mode="widthFix" src="../../icon/navigation/aboutus.png" />
+  </navigator>
+  <navigator url="/pages/tiyancourse/tiyancourse">
+    <image mode="widthFix" src="../../icon/navigation/tiyancourse.png" />
+  </navigator>
+  <view bindtap="switchToCourse">
+    <image mode="widthFix" src="../../icon/navigation/jingpincourse.png" />
+  </view>
+  <navigator url="/pages/album/album">
+    <image mode="widthFix" src="../../icon/navigation/album.png" />
+  </navigator>
+  <view bindtap="switchToTeacher">
+    <image mode="widthFix" src="../../icon/navigation/teacher.png" />
+  </view>
+  <navigator url="/pages/student/student">
+    <image mode="widthFix" src="../../icon/navigation/student.png" />
+  </navigator>
+  <navigator url="/pages/activity/activity">
+    <image mode="widthFix" src="../../icon/navigation/activity.png" />
+  </navigator>
+  <view bindtap="switchToContact" >
+    <image mode="widthFix" src="../../icon/navigation/contact.png" />
+  </view>
+</view>
+
+<!--行级占位符-->
+<view><text decode="{{true}}">&nbsp;</text></view>
+
+<!--课程导航-->
+<view class="index_title">
+  <view class="nav_tap">
+    <view class="title">精品课程</view>
+    <view class="index_more" bindtap="toCourseMore">更多 ></view>
+  </view>
+  <view class="course_tap_floating" wx:for="{{course}}" wx:for-item="item" wx:for-index="index" wx:key="*this" >
+    <block wx:if="{{index<1}}">
+      <image mode="widthFix" src="{{item.src}}" bindtap="toCourse"/>
+      <view class="course_details" bindtap="toCourse">
+        <view class="course_title">{{item.courseTitle}}</view>
+        <view class="course_order">
+          <text class="course_tips1">电话询价</text>
+          <text class="course_tips2">课时：电话详询</text>
+          <button class="mini-btn" size="mini" style="height:40rpx;font-size:25rpx;color:white;text-align:center;line-height:40rpx;">预约试听</button>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<!--相册导航-->
+<view class="index_title">
+  <view class="nav_tap">
+    <view class="title">学校相册</view>
+    <view class="index_more" bindtap="toAlbumMore">更多 ></view>
+  </view>
+  <scroll-view class="school_imgs" scroll-x="true" >
+    <block wx:for="{{albumSrc}}">
+      <image mode="scaleToFill" src="{{item.src}}" />
+    </block>
+  </scroll-view>
+</view>
+
+<!--资讯活动导航-->
+<view class="index_title">
+  <view class="nav_tap">
+    <view class="title">资讯活动</view>
+    <view class="index_more" bindtap="toActivityMore">更多 ></view>
+  </view>
+  <view class="activity_tap_floating">
+    <image class="activity_img" mode="scaleToFill" src="https://pic.downk.cc/item/5eda0c4ac2a9a83be533f3ea.jpg" />
+    <view class="actyvity_title">
+      <view class="activity_title_detail">语匠社暑期户外活动</view>
+      <view class="activity_tap">
+        <button class="mini-btn" type="default" size="mini" style="height:40rpx;font-size:25rpx;color:#77828d;text-align:center;line-height:40rpx;" >户外活动</button>
+        <text class="activity_date">2020-06-01</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!--联系方式导航-->
+<view class="index_title">
+  <view class="nav_tap">
+    <view class="title">联系方式</view>
+    <view class="index_more" bindtap="toContactMore">成都校区 ></view>
+  </view>
+  <view class="contact_tap_floating">
+    <view class="contact_map">
+      <map longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" show-location="true" scale="14" style="width:100%;height:300rpx" />
+    </view>
+    <view class="map_details">
+      <view class="add_name">茶店子</view>
+      <view class="add_details">茶店子路龙湖紫宸香颂4期3栋3单元710</view>
+      <view class="phone">电话：4000303096</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,150 @@
+swiper{
+    display: flex;
+    width: 750rpx;
+    height: 340rpx;
+    image{
+        width: 100%;
+    }
+}
+
+.index_cate{
+    padding-top: 50rpx;
+    navigator,view{
+        display: flex;
+        float: left;
+        width: 25%;
+        padding-bottom: 20rpx;
+        align-items: center;
+        justify-content: center;
+        image{
+            width: 50%;
+        }
+    }
+}
+
+.index_title{
+    width: 100%;
+    .nav_tap{
+        display: flex;
+        padding-bottom: 10rpx;
+        padding-top: 30rpx;
+        .title{
+            flex: 4;
+            font-size: medium;
+            color: var(--themeColor);
+            padding-left: 25rpx;
+        }
+        .index_more{
+            flex: 1;
+            font-size: small;
+            text-align: right;
+            padding-right: 30rpx;
+        }
+    }
+    .course_tap_floating{
+        background-color: white;
+        margin-left: 20rpx;
+        margin-right: 20rpx;
+        image{
+            border-radius: 10rpx;
+            width: 100%;
+        }
+        .course_details{
+            .course_title{
+                padding-left: 15rpx;
+                font-size: medium;
+                font-weight: bold;
+            }
+            .course_order{
+                padding: 15rpx;
+                display: flex;
+                .course_tips1{
+                    flex: 1;
+                    color: red;
+                }
+                .course_tips2{
+                    flex: 2;
+                }
+                button{
+                    flex: 1;
+                    background-color:var(--themeColor);
+                    border-radius: 50rpx;
+                }
+            }
+        }
+    }
+    .school_imgs{
+        display: flex;
+        white-space: nowrap;
+        height: 300rpx;
+        image{
+            border-radius: 15rpx;
+            display: inline-block;
+            width: 520rpx;
+            height: 100%;
+            margin-left: 20rpx;
+        }
+    }
+    .activity_tap_floating{
+        display: flex;
+        height: 180rpx;
+        background-color: white;
+        margin-left: 20rpx;
+        margin-right: 20rpx;
+        border-radius: 10rpx;
+        .activity_img{
+            flex: 2;
+            height: 100%;
+            border-radius: 10rpx;
+        }
+        .actyvity_title{
+            flex: 3;
+            .activity_title_detail{
+                font-size: 12;
+                padding-left: 15rpx;
+                padding-top: 10rpx;
+            }
+            .activity_tap{
+                display: flex;
+                margin-top: 70rpx;
+                margin-left: 15rpx;
+                button{
+                    flex: 1;
+                }
+                .activity_date{
+                    flex: 2;
+                    text-align: right;
+                    margin-right: 15rpx;
+                    color: #77828d;
+                }
+            }
+        }
+    }
+    .contact_tap_floating{
+        margin-left: 20rpx;
+        margin-right: 20rpx;
+        background-color: white;
+        margin-bottom: 50rpx;
+        .map_details{
+            .add_name{
+                font-size: medium;
+                font-weight: 800;
+                padding-top: 30rpx;
+                padding-bottom: 20rpx;
+                padding-left: 20rpx;
+            }
+            .add_details{
+                font-size: smaller;
+                color: #77828d;
+                padding-bottom: 20rpx;
+                padding-left: 20rpx;
+            }
+            .phone{
+                font-size: smaller;
+                color: #77828d;
+                padding-bottom: 20rpx;
+                padding-left: 20rpx;
+            }
+        }
+    }
+}

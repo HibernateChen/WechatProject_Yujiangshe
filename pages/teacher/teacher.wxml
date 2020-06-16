@@ -1,0 +1,11 @@
+<view class="teacher_group">
+    <view class="teacher" wx:for="{{teacher}}" wx:for-item="item" wx:for-index="index" wx:key="*this" >
+        <view class="teacher_image">
+            <image mode="widthFix" class="teacher_image" src="{{item.src}}" />
+        </view>
+        <view class="teacher_name">{{item.name}}</view>
+        <view class="detail">查看详情</view>
+    </view>
+</view>
+
+

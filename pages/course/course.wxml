@@ -1,0 +1,13 @@
+<view class="index_title">
+  <view class="course_tap_floating" wx:for="{{course}}" wx:for-item="item" wx:for-index="index" wx:key="*this" >
+    <image mode="widthFix" src="{{item.src}}"/>
+    <navigator  class="course_details" url="/pages/courseOrder/courseOrder?index={{index}}&src={{item.src}}&title={{item.courseTitle}}" >
+      <view class="course_title">{{item.courseTitle}}</view>
+      <view class="course_order">
+          <text class="course_tips1">电话询价</text>
+          <text class="course_tips2">课时：电话详询</text>
+          <button class="mini-btn" size="mini" style="height:40rpx;font-size:25rpx;color:white;text-align:center;line-height:40rpx;">预约试听</button>
+      </view>
+    </navigator>
+  </view>
+</view>

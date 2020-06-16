@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/teacher/teacher",
+    "pages/course/course",
+    "pages/contact/contact",
+    "pages/mine/mine",
+    "pages/aboutUs/aboutUs",
+    "pages/tiyancourse/tiyancourse",
+    "pages/album/album",
+    "pages/student/student",
+    "pages/activity/activity",
+    "pages/courseOrder/courseOrder",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2E8B57",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "backgroundColor":"#faebd7"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#2E8B57",
+    "backgroundColor": "#fafafa",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icon/tabbar/_home.png",
+        "selectedIconPath": "icon/tabbar/home.png"
+      },
+      {
+        "pagePath": "pages/teacher/teacher",
+        "text": "老师",
+        "iconPath": "icon/tabbar/_img.png",
+        "selectedIconPath": "icon/tabbar/img.png"
+      },
+      {
+        "pagePath": "pages/course/course",
+        "text": "课程",
+        "iconPath": "icon/tabbar/_videocamera.png",
+        "selectedIconPath": "icon/tabbar/videocamera.png"
+      },
+      {
+        "pagePath": "pages/contact/contact",
+        "text": "联系",
+        "iconPath": "icon/tabbar/_search.png",
+        "selectedIconPath": "icon/tabbar/search.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "icon/tabbar/_my.png",
+        "selectedIconPath": "icon/tabbar/my.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

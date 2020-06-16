@@ -1,0 +1,40 @@
+<view class="page" wx:for="{{courseInfo}}" wx:for-item="item" wx:for-index="index" wx:key="*this" >
+    <block wx:if="{{index==index1}}">
+        <image mode="widthFix" src="{{src}}" />
+        <view class="synopsis">
+            <view class="title">{{title}}</view>
+            <view class="price_mode">电话询价</view>
+            <view class="detail">
+                <text class="type">课时情况</text>
+                <text class="info">{{item.situation}}</text>
+            </view>
+            <view class="detail">
+                <text class="type">学龄阶段</text>
+                <text class="info">{{item.age}}</text>
+            </view>
+            <view class="detail">
+                <text class="type">适用阶段</text>
+                <text class="info">{{item.stage}}</text>
+            </view>
+            <view class="detail">
+                <text class="type">总课时数</text>
+                <text class="info">{{item.hours}}</text>
+            </view>
+            <view class="detail">
+                <text class="type">班型</text>
+                <text class="info">{{item.type}}</text>
+            </view>
+        </view>
+        <view class="detailed">
+            <view class="title_tap">课程介绍</view>
+            <view class="text_style">
+                <text class="course_detailed" decode="{{true}}" >{{item.introduce}}</text>
+            </view>
+        </view>
+    </block>
+</view>
+<!-- 底部预约课程 -->
+<view class="footer_tool">
+    <text class="order">预约课程</text>
+</view>
+

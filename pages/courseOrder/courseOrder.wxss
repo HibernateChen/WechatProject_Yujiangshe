@@ -1,0 +1,69 @@
+page {
+  padding-bottom: 90rpx;
+}
+.page image {
+  width: 100%;
+}
+.page .synopsis {
+  margin: 20rpx;
+  background-color: white;
+  border-radius: 20rpx;
+}
+.page .synopsis .title {
+  font-size: large;
+  padding: 15rpx;
+  font-weight: 550;
+}
+.page .synopsis .price_mode {
+  font-size: small;
+  color: #ff8243;
+  padding-left: 15rpx;
+  padding-bottom: 35rpx;
+}
+.page .synopsis .detail {
+  padding-bottom: 25rpx;
+  padding-left: 15rpx;
+  display: flex;
+}
+.page .synopsis .detail .type {
+  flex: 1;
+  color: #808080;
+}
+.page .synopsis .detail .info {
+  flex: 3;
+}
+.page .detailed {
+  margin: 20rpx;
+  background-color: white;
+  border-radius: 20rpx;
+}
+.page .detailed .title_tap {
+  color: #ff8243;
+  padding-left: 15rpx;
+  padding-top: 15rpx;
+  padding-bottom: 20rpx;
+}
+.page .detailed .text_style {
+  width: 95%;
+  padding: 15rpx;
+}
+.page .detailed .text_style .course_detailed {
+  line-height: 50rpx;
+}
+.footer_tool {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #ff8243;
+}
+.footer_tool .order {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+}
