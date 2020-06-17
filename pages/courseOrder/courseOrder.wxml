@@ -34,7 +34,44 @@
     </block>
 </view>
 <!-- 底部预约课程 -->
-<view class="footer_tool">
+<view class="footer_tool" bindtap="showModal">
     <text class="order">预约课程</text>
 </view>
+<!-- 底部滑出模态框 -->
+<!-- modal  -->
+<view class="modal modal-bottom-dialog" hidden="{{hideFlag}}">
+    <view class="modal-cancel" bindtap="hideModal"></view>
+    <view class="bottom-dialog-body bottom-positon" animation="{{animationData}}">
+        <view class='Mcancel' >
+            <view class="model-order">预约课程</view>
+            <form catchsubmit="formSubmit" catchreset="formReset">
+                <view class="page-section">
+                    <view class="weui-cells weui-cells_after-title">
+                        <view class="weui-cell weui-cell_input">
+                            <view class="weui-cell__bd" >
+                                <input class="weui-input" type="text" maxlength="10" placeholder="请输入姓名" />
+                            </view>
+                        </view>
+                    </view>
+                    <view class="weui-cells weui-cells_after-title">
+                        <view class="weui-cell weui-cell_input">
+                            <view class="weui-cell__bd" >
+                                <input class="weui-input" type="number" placeholder="请输入手机号" />
+                            </view>
+                        </view>
+                    </view>
+                </view>
 
+                <view class="mdoel-tips">
+                    <text>请正确填写预留信息，我们将稍后联系您！</text>
+                </view>
+
+                <view class="btn-area">
+                    <view class="btn-confirm">
+                        <button style="margin: 30rpx 0" type="primary" formType="submit">确认预约</button>
+                    </view>
+                </view>
+            </form>
+        </view>
+    </view>
+</view> 
