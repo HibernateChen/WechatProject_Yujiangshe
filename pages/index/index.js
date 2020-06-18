@@ -23,6 +23,12 @@ Page({
       {src:"https://pic.downk.cc/item/5eda0002c2a9a83be51dd368.jpg"}
     ],
 
+    //资讯活动
+    activity:[
+      {id:"0",src:"https://pic.downk.cc/item/5eda0c4ac2a9a83be533f3ea.jpg",title:"语匠社搬家啦！",date:"2020-03-01"},
+      {id:"1",src:"https://pic.downk.cc/item/5eda0c4ac2a9a83be533f3ea.jpg",title:"语匠社暑期夏令营！",date:"2020-06-01"}
+    ],
+
     //地图
     markers:[{
       iconPath: "../../icon/map/location.png",
@@ -86,5 +92,30 @@ Page({
       fail: ()=>{},
       complete: ()=>{}
     });
+  },
+  
+  toContactMore(e){
+    wx.switchTab({
+      url: '/pages/contact/contact',
+    });
+  },
+
+  //预览图片
+  topic_preview: function(e){
+    console.log(e)
+    var that = this;
+    var src = e.currentTarget.dataset.src;
+    var previewImgArr = [];
+    //通过循环在数据链里面找到和这个id相同的这一组数据，然后再取出这一组数据当中的图片
+    var data = that.data.albumSrc;
+
+    for (var i in data) {
+      previewImgArr.push(data[i].src) ;
+    }
+    
+    wx.previewImage({
+      current: src, // 当前显示图片的http链接
+      urls: previewImgArr // 需要预览的图片http链接列表
+    })
   }
 })

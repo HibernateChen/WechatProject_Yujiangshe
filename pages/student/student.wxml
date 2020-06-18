@@ -1,2 +1,3 @@
-<!--pages/student/student.wxml-->
-<text>pages/student/student.wxml</text>
+<view class="comingsoon">
+    <image mode="widthFix" src="https://pic.downk.cc/item/5eeae79e14195aa594085a2f.jpg" />
+</view>

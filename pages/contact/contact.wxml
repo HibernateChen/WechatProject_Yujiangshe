@@ -1,2 +1,13 @@
-<!--pages/contact/contact.wxml-->
-<text>pages/contact/contact.wxml</text>
+<!--联系方式导航-->
+<view class="index_title">
+  <view class="contact_tap_floating">
+    <view class="contact_map">
+      <map longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" show-location="true" scale="14" style="width:100%;height:300rpx" />
+    </view>
+    <view class="map_details">
+      <view class="add_name">茶店子</view>
+      <view class="add_details">茶店子路龙湖紫宸香颂4期3栋3单元710</view>
+      <view class="phone">电话：4000303096</view>
+    </view>
+  </view>
+</view>

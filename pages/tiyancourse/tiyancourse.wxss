@@ -1,1 +1,7 @@
-/* pages/tiyancourse/tiyancourse.wxss */
+.comingsoon {
+  margin: 20rpx;
+}
+.comingsoon image {
+  width: 100%;
+  border-radius: 10rpx;
+}

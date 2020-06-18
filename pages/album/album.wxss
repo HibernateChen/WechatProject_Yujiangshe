@@ -1,1 +1,13 @@
-/* pages/album/album.wxss */
+.albums {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  padding-top: 20rpx;
+}
+.albums image {
+  margin: 2%;
+  width: 46%;
+  height: 200rpx;
+  border-radius: 20rpx;
+}

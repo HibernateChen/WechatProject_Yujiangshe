@@ -87,17 +87,19 @@ swiper image {
 .index_title .activity_tap_floating {
   display: flex;
   height: 180rpx;
-  background-color: white;
   margin-left: 20rpx;
   margin-right: 20rpx;
+  padding-bottom: 20rpx;
   border-radius: 10rpx;
 }
 .index_title .activity_tap_floating .activity_img {
   flex: 2;
   height: 100%;
-  border-radius: 10rpx;
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
 }
 .index_title .activity_tap_floating .actyvity_title {
+  background-color: white;
   flex: 3;
 }
 .index_title .activity_tap_floating .actyvity_title .activity_title_detail {
@@ -112,6 +114,7 @@ swiper image {
 }
 .index_title .activity_tap_floating .actyvity_title .activity_tap button {
   flex: 1;
+  border-radius: 50rpx;
 }
 .index_title .activity_tap_floating .actyvity_title .activity_tap .activity_date {
   flex: 2;

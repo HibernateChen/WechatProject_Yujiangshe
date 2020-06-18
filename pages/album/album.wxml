@@ -1,2 +1,6 @@
 <!--pages/album/album.wxml-->
-<text>pages/album/album.wxml</text>
+<view class="albums" >
+    <block wx:for="{{albumSrc}}" wx:for-item="item" wx:for-index="index" wx:key="*this">
+        <image mode="scaleToFill" data-src="{{item.src}}" src="{{item.src}}" bindtap='topic_preview'/>
+    </block>
+</view>

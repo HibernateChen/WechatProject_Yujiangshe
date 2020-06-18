@@ -1,2 +1,14 @@
-<!--pages/activity/activity.wxml-->
-<text>pages/activity/activity.wxml</text>
+<view class="index_title">
+  <block wx:for="{{activity}}" wx:for-item="item" wx:for-index="index" wx:key="*this" >
+    <view class="activity_tap_floating">
+        <image class="activity_img" mode="scaleToFill" src="{{item.src}}" />
+        <view class="actyvity_title">
+          <view class="activity_title_detail">{{item.title}}</view>
+          <view class="activity_tap">
+            <button class="mini-btn" type="default" size="mini" style="height:40rpx;font-size:25rpx;color:#77828d;text-align:center;line-height:40rpx;" >户外活动</button>
+            <text class="activity_date">{{item.date}}</text>
+          </view>
+        </view>
+    </view>
+  </block>
+</view>

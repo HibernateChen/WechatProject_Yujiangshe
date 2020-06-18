@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    activity:[
+      {id:"0",src:"https://pic.downk.cc/item/5eda0c4ac2a9a83be533f3ea.jpg",title:"语匠社搬家啦！",date:"2020-03-01"},
+      {id:"1",src:"https://pic.downk.cc/item/5eda0c4ac2a9a83be533f3ea.jpg",title:"语匠社暑期夏令营！",date:"2020-06-01"}
+    ]
   },
 
   /**
