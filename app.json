@@ -13,6 +13,11 @@
     "pages/courseOrder/courseOrder",
     "pages/logs/logs"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于地图导航显示"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#2E8B57",

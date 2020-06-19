@@ -9,5 +9,9 @@
       <view class="add_details">茶店子路龙湖紫宸香颂4期3栋3单元710</view>
       <view class="phone">电话：4000303096</view>
     </view>
+    <view class="map_func">
+      <view class="map" bindtap="getLocation" ><image mode="widthFix" src="../../icon/map/map.png" />地图</view>
+      <view class="call" bindtap="calling" ><image mode="widthFix" src="../../icon/map/call.png" />致电</view>
+    </view>
   </view>
 </view>

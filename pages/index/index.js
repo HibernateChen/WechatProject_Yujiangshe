@@ -102,7 +102,6 @@ Page({
 
   //预览图片
   topic_preview: function(e){
-    console.log(e)
     var that = this;
     var src = e.currentTarget.dataset.src;
     var previewImgArr = [];
