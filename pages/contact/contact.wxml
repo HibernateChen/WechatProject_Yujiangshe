@@ -12,6 +12,10 @@
     <view class="map_func">
       <view class="map" bindtap="getLocation" ><image mode="widthFix" src="../../icon/map/map.png" />地图</view>
       <view class="call" bindtap="calling" ><image mode="widthFix" src="../../icon/map/call.png" />致电</view>
+      <view class="online">
+        <image mode="widthFix" src="../../icon/map/online.png" />
+        <button open-type="contact">在线咨询</button>
+      </view>
     </view>
   </view>
 </view>

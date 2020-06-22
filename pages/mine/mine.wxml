@@ -1,2 +1,18 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<!--index.wxml-->
+<view>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 点击授权登录 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>
+<view class="orderinfo">
+  <view class="orderCourse">
+    <image mode="widthFix" src="../../icon/mine/orderCourse.png" />
+  </view>
+  <view class="orderExperienceCourse">
+    <image mode="widthFix" src="../../icon/mine/orderExperienceCourse.png" />
+  </view>
+</view>

@@ -99,6 +99,13 @@
 					"id": -1,
 					"name": "联系我们",
 					"pathName": "pages/contact/contact",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/mine/mine",
 					"scene": null
 				}
 			]

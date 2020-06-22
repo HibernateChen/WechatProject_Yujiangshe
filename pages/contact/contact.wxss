@@ -57,3 +57,35 @@
   width: 10%;
   margin-right: 10rpx;
 }
+.contact_tap_floating .map_func .online {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1rpx solid;
+  border-color: white;
+}
+.contact_tap_floating .map_func .online image {
+  width: 10%;
+  margin-right: 10rpx;
+}
+.contact_tap_floating .map_func .online button {
+  background-color: #DCDCDC;
+  border-radius: 0rpx;
+  padding: 0rpx;
+  margin: 0rpx;
+  display: inline-block;
+  line-height: 1;
+  width: 48%;
+  font-weight: 800;
+  font-size: 28rpx;
+}
+.contact_tap_floating .map_func .online button::after {
+  /*button的边框样式是通过::after方式实现的*/
+  border: none;
+}
+.contact_tap_floating .map_func .online .button-hover {
+  /*点击后样式*/
+  color: #000;
+  background-color: #DCDCDC;
+}

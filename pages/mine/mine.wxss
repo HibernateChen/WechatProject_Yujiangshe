@@ -1,1 +1,41 @@
-/* pages/mine/mine.wxss */
+.userinfo {
+  display: flex;
+  align-items: center;
+  background-color: var(--themeColor);
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+}
+.userinfo .userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo .userinfo-nickname {
+  color: #aaa;
+}
+.orderinfo {
+  height: 200rpx;
+  background-color: white;
+  border-radius: 10rpx;
+  margin: 20rpx;
+  display: flex;
+}
+.orderinfo .orderCourse {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.orderinfo .orderCourse image {
+  width: 35%;
+}
+.orderinfo .orderExperienceCourse {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.orderinfo .orderExperienceCourse image {
+  width: 35%;
+}
