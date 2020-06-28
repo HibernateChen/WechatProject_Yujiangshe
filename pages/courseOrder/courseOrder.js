@@ -1,4 +1,6 @@
 // pages/courseOrder/courseOrder.js
+var util = require('../../utils/util.js');//引入工具类处理日期问题
+var app = getApp();//方便获取全局data
 Page({
 
   /**
@@ -24,7 +26,9 @@ Page({
     index1:{},
 
     hideFlag: true,//true-隐藏  false-显示 控制模态框显示隐藏
-    animationData: {}
+    animationData: {},//模态框
+
+    //orderInfo:[]//用户预约信息用于存缓存
   },
 
   /**
@@ -90,6 +94,44 @@ Page({
     this.setData({
       animationData: this.animation.export(),
     })
+  },
+  //获取表单提交的姓名和电话，并存入缓存
+  formSubmit(e){
+    var that = this;
+    var info;
+    for(var i=0;i<4; i++){
+      info = {
+        date:util.formatTime(new Date()),
+        title:that.data.title,
+        name:e.detail.value.name,
+        phone:e.detail.value.phone
+      };
+    };
+    //var orderInfo = that.data.orderInfo;
+    var orderInfo = app.globalData.orderInfo;
+    orderInfo.push(info);
+    //获取缓存
+    that.setData({
+      orderInfo
+    });
+    wx.setStorageSync("orderInfo", that.data.orderInfo);
+  },
+  //点击确认预约收起模态框
+  comfirmOrder(){
+    var that = this;
+    var animation = wx.createAnimation({
+      duration: 400,//动画的持续时间 默认400ms
+      timingFunction: 'ease',//动画的效果 默认值是linear
+    })
+    this.animation = animation
+    that.slideDown();//调用动画--滑出
+    var time1 = setTimeout(function () {
+      that.setData({
+        hideFlag: true
+      })
+      clearTimeout(time1);
+      time1 = null;
+    }, 220)//先执行下滑动画，再隐藏模块
   },
   //-----------底部滑出模态框------------
 

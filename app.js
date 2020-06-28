@@ -34,6 +34,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    orderInfo:[], //全局预约课程数据，所有预约必须全部存入全局数组
   }
 })

@@ -49,14 +49,14 @@
                     <view class="weui-cells weui-cells_after-title">
                         <view class="weui-cell weui-cell_input">
                             <view class="weui-cell__bd" >
-                                <input class="weui-input" type="text" maxlength="10" placeholder="请输入姓名" />
+                                <input name="name" value="{{name}}" class="weui-input" type="text" maxlength="10" placeholder="请输入姓名" />
                             </view>
                         </view>
                     </view>
                     <view class="weui-cells weui-cells_after-title">
                         <view class="weui-cell weui-cell_input">
                             <view class="weui-cell__bd" >
-                                <input class="weui-input" type="number" placeholder="请输入手机号" />
+                                <input name="phone" value="{{phone}}" class="weui-input" type="number" placeholder="请输入手机号" />
                             </view>
                         </view>
                     </view>
@@ -67,7 +67,7 @@
                 </view>
 
                 <view class="btn-area">
-                    <view class="btn-confirm">
+                    <view class="btn-confirm" bindtap="comfirmOrder">
                         <button style="margin: 30rpx 0" type="primary" formType="submit">确认预约</button>
                     </view>
                 </view>
