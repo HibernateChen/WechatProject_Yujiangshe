@@ -11,7 +11,9 @@
     "pages/student/student",
     "pages/activity/activity",
     "pages/courseOrder/courseOrder",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/orderedCourse",
+    "pages/orderedCourse/orderedCourse"
   ],
   "permission": {
     "scope.userLocation": {
@@ -23,7 +25,7 @@
     "navigationBarBackgroundColor": "#2E8B57",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black",
-    "backgroundColor":"#faebd7"
+    "backgroundColor": "#faebd7"
   },
   "tabBar": {
     "color": "#999",

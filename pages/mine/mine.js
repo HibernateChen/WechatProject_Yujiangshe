@@ -49,5 +49,25 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  toOrderedCourse(){
+    wx.navigateTo({
+      url: '/pages/orderedCourse/orderedCourse?type=orderedCourse',
+      success: (result)=>{
+        
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
+  },
+  toOrderedExperenceCourse(){
+    wx.navigateTo({
+      url: '/pages/orderedCourse/orderedCourse?type=orderedExperenceCourse',
+      success: (result)=>{
+        
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
   }
 })

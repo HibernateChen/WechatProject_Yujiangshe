@@ -1,0 +1,3 @@
+<!--pages/orderedCourse/orderedCourse.wxml-->
+<orderedCourse list="{{list}}" headers="{{headers}}"></orderedCourse>
+<view class="tips">*稍后我们将与您取得联系，请保持电话畅通。</view>

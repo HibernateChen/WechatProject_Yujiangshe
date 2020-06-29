@@ -101,6 +101,7 @@ Page({
     var info;
     for(var i=0;i<4; i++){
       info = {
+        type:"course",
         date:util.formatTime(new Date()),
         title:that.data.title,
         name:e.detail.value.name,

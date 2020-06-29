@@ -1,0 +1,50 @@
+/* compoments/orderedcourse/orderedCourse.wxss */
+
+.table-wrap{
+    width: 100%;
+    top: 20rpx;
+}
+.table{
+    background-color: white;
+    border:1px solid #dadada;
+    border-right:0;
+    border-bottom: 0;
+    height: 100%;
+    margin-top: 10rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    padding-bottom: 10rpx;
+}
+.tr{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+.th{
+    padding: 3px;
+    border-bottom: 1px solid #dadada;
+    border-right: 1px solid #dadada;
+    text-align: center;
+    width: 100%;
+    /*font-weight: 800;*/
+    background-color: rgba(139, 182, 155, 0.12);
+    font-size: 28rpx;
+    color: rgba(23, 21, 23, 0.73);
+}
+.td{
+    padding: 3px;
+    border-bottom: 1px solid #dadada;
+    border-right: 1px solid #dadada;
+    text-align: center;
+    width: 100%;
+    font-size: 28rpx;
+    color: #666666;
+
+    /*文字长度超过部分用...代替*/
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}

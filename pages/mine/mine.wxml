@@ -9,10 +9,10 @@
   </view>
 </view>
 <view class="orderinfo">
-  <view class="orderCourse">
+  <view class="orderCourse" bindtap="toOrderedCourse">
     <image mode="widthFix" src="../../icon/mine/orderCourse.png" />
   </view>
-  <view class="orderExperienceCourse">
+  <view class="orderExperienceCourse" bindtap="toOrderedExperenceCourse">
     <image mode="widthFix" src="../../icon/mine/orderExperienceCourse.png" />
   </view>
 </view>
