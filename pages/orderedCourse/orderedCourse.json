@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "orderedCourse":"/compoments/orderedCourse/orderedCourse"
-  }
+    "orderedCourse":"/compoments/orderedCourse/orderedCourse",
+    "orderedCourseTable":"/compoments/orderedCourseTable/orderedCourseTable"
+  },
+  "navigationBarTitleText":"预约详情"
 }

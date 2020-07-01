@@ -5,8 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    headers: ["预约时间", "课程名称"],
-    list:[]
+    //headers: ["预约时间", "课程名称"],
+    listData:[] //[{},{}]表格需要传入该类型数据
+    //{"date":"01","title":"aa"},{"date":"01","title":"aa"},{"date":"01","title":"aa"}
   },
 
   /**
@@ -14,20 +15,21 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-    var thatList = that.data.list;
+    var thatList = that.data.listData;
+    var orderedCourseObj={};
     if(options.type==="orderedCourse"){
-      //try{
+      try{
         var orderCourse = wx.getStorageSync("orderInfo");
-        var thisList=[];
         if(orderCourse){
-          orderCourse.forEach(function(item,index){
-            console.log(index);
-            thisList.push(item[index]);
-            thatList.push(thisList);
-          });
-          console.log(thisList);
+          for(var i in orderCourse){
+            orderedCourseObj.date=orderCourse[i].date;
+            orderedCourseObj.title=orderCourse[i].title;
+            thatList.push(orderedCourseObj);
+            orderedCourseObj={};
+          }
+          console.log(thatList);
           that.setData({
-            list:thatList
+            listData:thatList
           });
         }else{
           wx.showToast({
@@ -36,15 +38,40 @@ Page({
             duration: 3000
           })
         }
-      // }catch(e){
-      //   wx.showToast({
-      //     title: "系统异常,请致电联系...",
-      //     icon:"none",
-      //     duration: 5000
-      //   })
-      // }
+      }catch(e){
+        wx.showToast({
+          title: "系统异常,请致电联系...",
+          icon:"none",
+          duration: 5000
+        })
+      }
     }else if(options.type==="orderedExperenceCourse"){
-
+      try{
+        var orderCourse = wx.getStorageSync("orderExperenceInfo");
+        if(orderCourse){
+          for(var i in orderCourse){
+            orderedCourseObj.date=orderCourse[i].date;
+            orderedCourseObj.title=orderCourse[i].title;
+            thatList.push(orderedCourseObj);
+            orderedCourseObj={};
+          }
+          that.setData({
+            listData:thatList
+          });
+        }else{
+          wx.showToast({
+            title: "暂无预约课程",
+            icon:"none",
+            duration: 3000
+          })
+        }
+      }catch(e){
+        wx.showToast({
+          title: "系统异常,请致电联系...",
+          icon:"none",
+          duration: 5000
+        })
+      }
     }else{
       wx.showToast({
         title: "系统异常,请致电联系",

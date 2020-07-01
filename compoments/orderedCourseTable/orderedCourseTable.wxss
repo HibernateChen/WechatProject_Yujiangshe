@@ -1,0 +1,43 @@
+/* compoments/orderedCourseTable/orderedCourseTable.wxss */
+.table {
+  border: 0px solid darkgray;
+  margin: 10rpx;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+  border-bottom: 1rpx solid darkgray;
+  border-left: 1rpx solid darkgray;
+  border-right: 1rpx solid darkgray;
+}
+.td {
+    width:50%;
+    justify-content: center;
+    text-align: center;
+
+    /*文字长度超出部分用...表示*/
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #E6F3F9;
+}
+.th {
+  width: 50%;
+  justify-content: center;
+  background: #a1a1a1;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}

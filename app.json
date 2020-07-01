@@ -12,7 +12,6 @@
     "pages/activity/activity",
     "pages/courseOrder/courseOrder",
     "pages/logs/logs",
-    "pages/orderedCourse",
     "pages/orderedCourse/orderedCourse"
   ],
   "permission": {
