@@ -116,6 +116,40 @@ Page({
       orderInfo
     });
     wx.setStorageSync("orderInfo", that.data.orderInfo);
+
+    //点击预约课程后将数据提交到后台
+    wx.request({
+      url: 'http://192.168.0.105:8080/order/submitOrderedCourse', 
+      data: {
+        type: 'course',
+        date: util.formatTime(new Date()),
+        title: that.data.title,
+        name: e.detail.value.name,
+        phone: e.detail.value.phone
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success (res) {
+        console.log("提交成功")
+        wx.showToast({
+          title: "预约成功",
+          icon:"success",
+          duration: 1000
+        })
+      },
+      fail(res){
+        console.log("提交失败")
+        wx.showToast({
+          title: "预约失败，请重试...",
+          icon:"none",
+          duration: 3000
+        })
+      },
+      complete(res){
+        console.log("操作完成")
+      }
+    })
   },
   //点击确认预约收起模态框
   comfirmOrder(){
