@@ -191,7 +191,8 @@ Page({
     },header: {
       'content-type': 'application/json' // 默认值
     }});
-    if(res.data.status==true){
+    if(res.data.code==='200'){
+      console.log(res);
       console.log("提交成功")
       wx.showToast({
         title: "预约成功",
@@ -205,6 +206,7 @@ Page({
       //存入缓存
       wx.setStorageSync("orderInfo", app.globalData.orderInfo);
     }else{
+      console.log(res);
       console.log("提交失败")
       wx.showToast({
         title: "预约失败，请重试...",
