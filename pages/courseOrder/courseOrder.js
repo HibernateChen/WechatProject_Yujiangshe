@@ -97,7 +97,7 @@ Page({
     })
   },
   //获取表单提交的姓名和电话，并存入缓存
-  formSubmit(e){
+  async formSubmit(e){
     var that = this;
     var info;
     for(var i=0;i<4; i++){
@@ -144,7 +144,44 @@ Page({
     //   }
     // })
 
-    request({url:"/order/submitOrderedCourse",
+    //使用promise语法
+    // request({url:"/order/submitOrderedCourse",
+    // data: {
+    //   type: 'course',
+    //   date: util.formatTime(new Date()),
+    //   title: that.data.title,
+    //   name: e.detail.value.name,
+    //   phone: e.detail.value.phone
+    // },header: {
+    //   'content-type': 'application/json' // 默认值
+    // }})
+    // .then(res=>{
+    //   console.log(res)
+    //   if(res.data.status==true){
+    //     console.log("提交成功")
+    //     wx.showToast({
+    //       title: "预约成功",
+    //       icon:"success",
+    //       duration: 3000
+    //     });
+    //     //获取全局orderInfo对象(后台链接成功之后执行)
+    //     var orderInfo = app.globalData.orderInfo;
+    //     //全局orderInfo对象存入表单提交过来的info数据
+    //     orderInfo.push(info);
+    //     //存入缓存
+    //     wx.setStorageSync("orderInfo", app.globalData.orderInfo);
+    //   }else{
+    //     console.log("提交失败")
+    //     wx.showToast({
+    //       title: "预约失败，请重试...",
+    //       icon:"none",
+    //       duration: 3000
+    //     })
+    //   }
+    // })
+
+    //使用async语法
+    const res = await request({url:"/order/submitOrderedCourse",
     data: {
       type: 'course',
       date: util.formatTime(new Date()),
@@ -153,31 +190,29 @@ Page({
       phone: e.detail.value.phone
     },header: {
       'content-type': 'application/json' // 默认值
-    }})
-    .then(res=>{
-      console.log(res)
-      if(res.data.status==true){
-        console.log("提交成功")
-        wx.showToast({
-          title: "预约成功",
-          icon:"success",
-          duration: 1000
-        });
-        //获取全局orderInfo对象(后台链接成功之后执行)
-        var orderInfo = app.globalData.orderInfo;
-        //全局orderInfo对象存入表单提交过来的info数据
-        orderInfo.push(info);
-        //存入缓存
-        wx.setStorageSync("orderInfo", app.globalData.orderInfo);
-      }else{
-        console.log("提交失败")
-        wx.showToast({
-          title: "预约失败，请重试...",
-          icon:"none",
-          duration: 3000
-        })
-      }
-    })
+    }});
+    if(res.data.status==true){
+      console.log("提交成功")
+      wx.showToast({
+        title: "预约成功",
+        icon:"success",
+        duration: 3000
+      });
+      //获取全局orderInfo对象(后台链接成功之后执行)
+      var orderInfo = app.globalData.orderInfo;
+      //全局orderInfo对象存入表单提交过来的info数据
+      orderInfo.push(info);
+      //存入缓存
+      wx.setStorageSync("orderInfo", app.globalData.orderInfo);
+    }else{
+      console.log("提交失败")
+      wx.showToast({
+        title: "预约失败，请重试...",
+        icon:"none",
+        duration: 3000
+      })
+    }
+
   },
   //点击确认预约收起模态框
   comfirmOrder(){
