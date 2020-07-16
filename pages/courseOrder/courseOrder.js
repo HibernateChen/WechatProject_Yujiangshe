@@ -1,4 +1,5 @@
 // pages/courseOrder/courseOrder.js
+import {request} from "../../request/index.js"
 var util = require('../../utils/util.js');//引入工具类处理日期问题
 var app = getApp();//方便获取全局data
 Page({
@@ -108,46 +109,73 @@ Page({
         phone:e.detail.value.phone
       };
     };
-    //var orderInfo = that.data.orderInfo;
-    var orderInfo = app.globalData.orderInfo;
-    orderInfo.push(info);
-    //获取缓存
-    that.setData({
-      orderInfo
-    });
-    wx.setStorageSync("orderInfo", that.data.orderInfo);
 
-    //点击预约课程后将数据提交到后台
-    wx.request({
-      url: 'http://192.168.0.105:8080/order/submitOrderedCourse', 
-      data: {
-        type: 'course',
-        date: util.formatTime(new Date()),
-        title: that.data.title,
-        name: e.detail.value.name,
-        phone: e.detail.value.phone
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success (res) {
+    // 点击预约课程后将数据提交到后台
+    // wx.request({
+    //   url: 'http://192.168.0.105:8080/order/submitOrderedCourse', 
+    //   data: {
+    //     type: 'course',
+    //     date: util.formatTime(new Date()),
+    //     title: that.data.title,
+    //     name: e.detail.value.name,
+    //     phone: e.detail.value.phone
+    //   },
+    //   header: {
+    //     'content-type': 'application/json' // 默认值
+    //   },
+    //   success (res) {
+    //     console.log("提交成功")
+    //     wx.showToast({
+    //       title: "预约成功",
+    //       icon:"success",
+    //       duration: 1000
+    //     })
+    //   },
+    //   fail(res){
+    //     console.log("提交失败")
+    //     wx.showToast({
+    //       title: "预约失败，请重试...",
+    //       icon:"none",
+    //       duration: 3000
+    //     })
+    //   },
+    //   complete(res){
+    //     console.log("操作完成")
+    //   }
+    // })
+
+    request({url:"/order/submitOrderedCourse",
+    data: {
+      type: 'course',
+      date: util.formatTime(new Date()),
+      title: that.data.title,
+      name: e.detail.value.name,
+      phone: e.detail.value.phone
+    },header: {
+      'content-type': 'application/json' // 默认值
+    }})
+    .then(res=>{
+      console.log(res)
+      if(res.data.status==true){
         console.log("提交成功")
         wx.showToast({
           title: "预约成功",
           icon:"success",
           duration: 1000
-        })
-      },
-      fail(res){
+        });
+        //获取全局orderInfo对象(后台链接成功之后执行)
+        var orderInfo = app.globalData.orderInfo;
+        //全局orderInfo对象存入表单提交过来的info数据
+        orderInfo.push(info);
+        //存入缓存
+        wx.setStorageSync("orderInfo", app.globalData.orderInfo);
+      }else{
         console.log("提交失败")
         wx.showToast({
           title: "预约失败，请重试...",
           icon:"none",
           duration: 3000
         })
-      },
-      complete(res){
-        console.log("操作完成")
       }
     })
   },
